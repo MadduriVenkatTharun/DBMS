@@ -1,0 +1,35 @@
+#10TRIGGERS
+
+
+#TABLECREATION
+
+
+create table emp2(ename varchar2(10), esal number(10));
+insert into emp2(ename,esal) values('Tharun',30000);
+insert into emp2(ename,esal) values('Sharath',35000);
+
+
+
+#PROGRAM 
+
+SET SERVER OUTPUT ON;
+create or replace trigger sql_change
+after delete or insert or update on emp2
+for each row
+when(new.esal>15000)
+declare
+sal_diff number;
+begin
+sal_diff:= :new.esal - :old.esal;
+dbms_output.put_line('old '||:old.esal);
+dbms_output.put_line('new '||:new.esal);
+dbms_output.put_line('inc '||sal_diff);
+end;
+/
+
+update emp2 set esal=esal+500 where esal>25000;
+
+select * from emp2;
+
+
+

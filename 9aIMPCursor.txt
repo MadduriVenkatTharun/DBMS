@@ -1,0 +1,29 @@
+#IMPLICIT CURSOR
+
+#TableCreation
+
+create table emp1(empname varchar2(10), empsal varchar2(10));
+insert into emp1(empname,empsal) values('MV', 15000);
+insert into emp1(empname,empsal) values('Michael', 20000);
+
+select * from emp1;
+
+
+#PROGRAM
+
+SET SERVER OUTPUT ON;
+declare
+tot_rows number;
+begin
+update emp1 set empsal = empsal +500;
+if sql % notfound then
+dbms_output.put_line('No employee updated');
+else
+tot_rows:=sql % rowcount;
+dbms_output.put_line(tot_rows||'Employee updated');
+end if;
+end;
+/
+
+
+select * from emp1;

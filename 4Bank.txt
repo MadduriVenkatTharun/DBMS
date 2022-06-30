@@ -1,0 +1,56 @@
+create table bankk(bid varchar2(10),bname varchar2(10),bbranch varchar2(10),bloc varchar2(10));
+
+create table customerr(cid varchar2(10),cname varchar2(10),caccno varchar2(10),cloc varchar2(10));
+
+create table loann(lid varchar2(10),lname varchar2(10),ltime varchar2(10),lammount varchar2(10));
+
+create table accountt(aid varchar2(10),accname varchar2(10),abranch varchar2(10),abranch varchar2(10));
+
+
+
+
+
+
+
+insert into bankk values('1','SBI','KNL','VR Colony');
+insert into bankk values('2','SBH','NDL','Checkpost');
+insert into bankk values('3','PNB','HYD','NV Colony');
+insert into bankk values('4','KVB','VZG','PV Colony');
+insert into bankk values('5','MSB','VJW','JV Colony');
+
+
+insert into customerr values('01','Ram','200','KNL');
+insert into customerr values('02','Ravi','201','HYD');
+insert into customerr values('03','Kiran','202','NDL');
+insert into customerr values('04','Rohit','203','VZG');
+insert into customerr values('05','Ranbir','204','VJW');
+
+
+insert into loann values('100','Home','5','700000);
+insert into loann values('101','Car','3','300000;
+insert into loann values('102','Bike','2','70000);
+insert into loann values('103','Home','10','90000);
+insert into loann values('104','Car','6','50000);
+
+insert into accountt values('1','SBI','KNL','VR Colony');
+insert into accountt values('2','SBH','NDL','Checkpost');
+insert into accountt values('3','PNB','HYD','NV Colony');
+insert into accountt values('4','KVB','VZG','PV Colony');
+insert into accountt values('5','MSB','VJW','JV Colony');
+
+
+
+
+select * from bankk;
+
+select * from customerr;
+
+select * from loann;
+
+select * from accountt;
+
+
+
+
+
+

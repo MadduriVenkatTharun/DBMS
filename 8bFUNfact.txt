@@ -1,0 +1,16 @@
+
+ SET serveroutput on;
+ create or replace function facto(a in number) return number is
+ i number;
+ f number;
+ begin
+ f:=1;
+ for i in 1..a
+ loop
+ f:=f*i;
+ end loop;
+ return f;
+ end facto;
+/
+
+select facto(5) from dual;

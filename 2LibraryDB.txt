@@ -1,0 +1,40 @@
+create table studentt(sid varchar2(10),sname varchar2(10),sbranch varchar2(10),sroll varchar2(10));
+
+create table bookk(bid varchar2(10),bname varchar2(10),bprice varchar2(10),bpages varchar2(10));
+
+create table transactionn(tid varchar2(10),sid varchar2(10),sname varchar2(10),bname varchar2(10));
+
+
+
+insert into studentt values('1','Tharun','CSBS','2944');
+insert into studentt values('2','Sharath','CSE','2945');
+insert into studentt values('3','Jithu','ECE','2946');
+insert into studentt values('4','Jason','MECH','2947');
+insert into studentt values('5','Srinath','CIV','2948');
+
+
+insert into bookk values('01','Fire','500','300');
+insert into bookk values('02','Gandhi','600','400');
+insert into bookk values('03','Peace','700','500');
+insert into bookk values('04','War','800','600');
+insert into bookk values('05','Africa','900','700');
+
+
+insert into transactionn values('100','1','Tharun','Gandhi');
+insert into transactionn values('101','2','Sharath','Fire');
+insert into transactionn values('102','3','Jithu','Africa');
+insert into transactionn values('103','4','Jason','War');
+insert into transactionn values('104','5','Srinath','Peace');
+
+
+
+
+select * from studentt;
+
+select * from bookk;
+
+select * from transactionn;
+
+
+
+

@@ -1,0 +1,78 @@
+
+
+CREATE TABLE Customers(customer_id varchar(10), first_name varchar(20), last_name varchar(20), age varchar(20), country varchar(20));
+
+INSERT INTO Customers VALUES(1, 'John', 'Doe', 31, 'USA');
+INSERT INTO Customers VALUES(2, 'Robert', 'Luna', 22, 'USA');
+INSERT INTO Customers VALUES(3, 'David', 'Robinson', 22, 'UK');
+INSERT INTO Customers VALUES(4, 'John', 'Reinhardt', 25, 'UK');
+INSERT INTO Customers VALUES(5, 'Betty', 'Doe', 28, 'UA');
+
+
+
+CREATE TABLE Orders(order_id varchar(10), item varchar(10), amount varchar(10), customer_id varchar(10));
+
+INSERT INTO Orders VALUES(1, 'Keyboard', 400, 4);
+INSERT INTO Orders VALUES(2, 'Mouse', 300, 4);
+INSERT INTO Orders VALUES(3, 'Monitor', 12000, 3);
+INSERT INTO Orders VALUES(4, 'Keyboard', 400, 1);
+INSERT INTO Orders VALUES(5, 'Mousepad', 250, 2);
+
+
+
+
+
+INNER JOIN QUERY
+
+SELECT Customers.age FROM Customers INNER JOIN Orders ON Customers.customer_id=Orders.customer_id;
+
+OUTPUT:
+
+age
+25
+25
+22
+31
+22
+
+FULL OUTER JOIN QUERY
+
+SELECT Customers.customer_id FROM Customers FULL OUTER JOIN Orders ON Customers.customer_id = Orders.customer_id;
+
+OUTPUT:
+
+customer_id
+NULL
+3
+NULL
+5
+NULL
+2
+4
+
+LEFT OUTER JOIN QUERY
+
+SELECT Customers.age FROM Customers LEFT OUTER JOIN Orders ON Customers.customer_id=Orders.customer_id;
+
+OUTPUT:
+
+age
+31
+22
+22
+25
+25
+28
+
+RIGHT OUTER JOIN QUERY
+
+SELECT Customers.age FROM Customers RIGHT JOIN Orders ON Customers.customer_id=Orders.customer_id;
+
+OUTPUT:
+
+age
+25
+25
+22
+31
+22

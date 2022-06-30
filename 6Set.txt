@@ -1,0 +1,25 @@
+create table depositor(cusname varchar2(10));
+
+insert into depositor values('Tharun');
+insert into depositor values('Sharath');
+insert into depositor values('Michael');
+
+
+create table customer(cusname varchar2(10));
+
+insert into customer values('Tharun');
+insert into customer values('Sharath');
+insert into customer values('Shelby');
+
+
+select cusname from depositor
+union
+select cusname from customer;
+
+select cusname from depositor
+intersect
+select cusname from customer;
+
+select cusname from depositor
+minus
+select cusname from customer;

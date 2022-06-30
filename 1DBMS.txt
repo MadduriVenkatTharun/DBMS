@@ -1,0 +1,17 @@
+--DDL Commands:
+
+create
+alter
+truncate
+
+--DML Commands:
+
+insert
+update
+delete
+select
+
+--DCL Commands:
+
+commit
+desc

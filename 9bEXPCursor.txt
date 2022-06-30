@@ -1,0 +1,41 @@
+#9EXPLICIT CURSOR
+
+#TableCreation
+
+create table stud1(sno varchar2(10), sname varchar2(10), m1 number(3), m2 number(3), m3 number(3), total number(4), avg number(5), grade varchar(10));
+insert into stud1(sno,sname,m1,m2,m3) values('1','Tharun',90,94,97);
+insert into stud1(sno,sname,m1,m2,m3) values('2','Sharath',95,98,97);
+
+select * from stud1;
+
+
+#PROGRAM
+
+declare
+ cursor c1 is select sno,m1,m2,m3 from stud1;
+ temp stud1%rowtype;
+ begin
+ open c1;
+ loop
+ fetch c1 into temp.sno,temp.m1,temp.m2,temp.m3;
+ exit when c1%notfound;
+ temp.total:=(temp.m1+temp.m2+temp.m3);
+ temp.avg:=(temp.total/3);
+if(temp.avg>=75) then
+temp.grade:='Topper';
+ elsif(temp.avg>60) then
+temp.grade:='1stclass';
+elsif(temp.avg>50) then
+temp.grade:='2ndclass';
+else
+temp.grade:='3rdclass';
+end if;
+update stud1 set total=temp.total,avg=temp.avg,grade=temp.grade where sno=temp.sno;
+end loop;
+close c1;
+end;
+/
+
+#SELECT
+
+select * from stud1;

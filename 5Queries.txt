@@ -1,0 +1,35 @@
+create table loan(loanno varchar2(10), amount varchar2(10));
+
+insert into loan values(1,25000);
+insert into loan values(2,35000);
+insert into loan values(3,40000);
+
+
+--select clause:
+
+select * from loan;
+
+
+
+-- where clause:
+
+select * from loan where amount>26000;
+
+
+
+--Order by:
+
+select amount from loan order by loanno;
+select loanno, amount from loan order by loanno;
+
+
+
+--Group by:
+
+select avg(amount) from loan group by loanno having avg(amount)>20000;
+
+
+
+--Pattern Matching: 
+
+select loanno from loan where loanno like '%y';

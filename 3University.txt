@@ -1,0 +1,52 @@
+create table studentt(sid varchar2(10),sname varchar2(10),sbranch varchar2(10),sroll varchar2(10));
+
+create table deptt(deptid varchar2(10),deptname varchar2(10),deptHOD varchar2(10),deptloc varchar2(10));
+
+create table employeee(eid varchar2(10),ename varchar2(10),epos varchar2(10),esal varchar2(10));
+
+create table coursee(cid varchar2(10),cdept varchar2(10),cemp varchar2(10),cname varchar2(10));
+
+
+
+
+
+
+
+insert into studentt values('1','Tharun','CSBS','2944');
+insert into studentt values('2','Sharath','CSE','2945');
+insert into studentt values('3','Jithu','ECE','2946');
+insert into studentt values('4','Jason','MECH','2947');
+insert into studentt values('5','Srinath','CIV','2948');
+
+
+insert into deptt values('01','CSBS','Sam','gprec');
+insert into deptt values('02','CSE','Rohit','gprec');
+insert into deptt values('03','ECE','John','gprec');
+insert into deptt values('04','MECH','Ravi','gprec');
+insert into deptt values('05','CIV','Ram','gprec');
+
+
+insert into employeee values('100','Michael','prof','50000');
+insert into employeee values('101','Justin','prof','50000);
+insert into employeee values('102','Lynn','dean','70000);
+insert into employeee values('103','Sunny','dean','70000);
+insert into employeee values('104','Vamsi','prof','50000);
+
+insert into coursee values('001','CSBS','Michael','FLAT');
+insert into coursee values('002','CSE','Justin','OS');
+insert into coursee values('003','ECE','Lynn','CVNM');
+insert into coursee values('004','MECH','Sunny','OR');
+insert into coursee values('005','CIV','Vamsi','EG');
+
+
+
+
+select * from studentt;
+
+select * from deptt;
+
+select * from employeee;
+
+
+
+

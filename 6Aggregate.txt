@@ -1,0 +1,14 @@
+create table loan(loanno varchar2(10), amount varchar2(10));
+
+insert into loan values(1,25000);
+insert into loan values(2,35000);
+insert into loan values(3,40000);
+
+
+select avg(amount) from loan;
+
+select max(amount) from loan;
+
+select count(*) from loan;
+
+select count(*) from loan where amount>26000;
